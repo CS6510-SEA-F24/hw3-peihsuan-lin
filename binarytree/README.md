@@ -33,6 +33,17 @@ This command will:
 -  Generate Javadoc in the `target/site/apidocs/` directory.
 -  Package the project into a JAR file, located in `target/`.
 
+### Key Phases And Plugins
+| Phase    | Plugins                                  |
+|----------|------------------------------------------|
+| validate | Checkstyle, OpenRewrite (Static Analysis)     |
+| compile  |                                          |
+| test     | JaCoCo (Test Coverage), Unit Tests       |
+| package  | Javadoc, Maven Package (JAR Creation)    |
+| verify   |                                          |
+| install  |                                          |
+| deploy   |                                          |
+
 ### Explicit Commands for Specific Tasks
 If you want to run individual tasks separately, here are the commands:
 
