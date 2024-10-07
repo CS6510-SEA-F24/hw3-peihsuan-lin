@@ -22,6 +22,21 @@ public class BinaryTree implements BinaryTreeInterface {
   }
 
   /**
+   * Constructs a binary tree with an integer value as the root node.
+   * @param rootValue the value of the root node
+   */
+  public BinaryTree(final int rootValue) {
+    this.root = new Node(rootValue);
+  }
+
+  /**
+   * Constructs an empty binary tree.
+   */
+  public BinaryTree() {
+    this.root = null;
+  }
+
+  /**
    * Inserts a value into the tree, it will call the helper method to
    * recursively insert with binary search tree property.
    *
