@@ -25,7 +25,7 @@ jobs:
 
       - name: Build and Test (Up to 'test' phase)
         run: mvn clean test
-        working-directory: ../../binarytree
+        working-directory: binarytree  # Run Maven from binarytree directory
 
       - name: Upload Artifacts
         if: always()
@@ -33,10 +33,10 @@ jobs:
         with:
           name: code-review-artifacts
           path: |
-            ../../binarytree/target/surefire-reports/
-            ../../binarytree/target/checkstyle-result.xml
-            ../../binarytree/target/rewrite/reports/
-            ../../binarytree/target/site/jacoco/
+            binarytree/target/surefire-reports/
+            binarytree/target/checkstyle-result.xml
+            binarytree/target/rewrite/reports/
+            binarytree/target/site/jacoco/
 
   # Job for Pushes to Main (Production Readiness)
   build_and_release:
@@ -54,7 +54,7 @@ jobs:
 
       - name: Build, Test, and Package (Up to 'package' phase)
         run: mvn clean package
-        working-directory: ../../binarytree
+        working-directory: binarytree  # Run Maven from binarytree directory
 
       - name: Upload Artifacts
         if: always()
@@ -62,9 +62,8 @@ jobs:
         with:
           name: production-artifacts
           path: |
-            ../../binarytree/target/*.jar
-            ../../binarytree/target/site/apidocs/
-            ../../binarytree/target/surefire-reports/
-            ../../binarytree/target/checkstyle-result.xml
-            ../../binarytree/target/rewrite/reports/
-            ../../binarytree/target/site/jacoco/
+            binarytree/target/*.jar
+            binarytree/target/site/apidocs/
+            binarytree/target/surefire-reports/
+            binarytree/target/checkstyle-result.xml
+            binarytree/target/rewrite/re
