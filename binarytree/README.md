@@ -76,3 +76,5 @@ mvn rewrite:run
 ```bash
 mvn clean package
 ```
+## Maven Central
+The project is available on [Maven Central](.
