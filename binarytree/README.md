@@ -77,4 +77,4 @@ mvn rewrite:run
 mvn clean package
 ```
 ## Maven Central
-The project is available on [Maven Central](.
+The project is available on [Maven Central](https://central.sonatype.com/artifact/io.github.peihsuan-lin/hw3)
